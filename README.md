@@ -18,11 +18,11 @@ A beautiful and feature-rich WYSIWYG editor built with [Tiptap](https://tiptap.d
 ## Installation
 
 ```bash
-npm install @jamir-hossain/richtor
+npm install richtor
 # or
-yarn add @jamir-hossain/richtor
+yarn add richtor
 # or
-pnpm add @jamir-hossain/richtor
+pnpm add richtor
 ```
 
 ## Usage
@@ -30,8 +30,8 @@ pnpm add @jamir-hossain/richtor
 ### Basic Editor
 
 ```tsx
-import { Editor } from '@jamir-hossain/richtor';
-import '@jamir-hossain/richtor/styles';
+import { Editor } from 'richtor';
+import 'richtor/styles';
 import { useState } from 'react';
 
 function App() {
@@ -56,8 +56,8 @@ function App() {
 To display the editor content in read-only mode:
 
 ```tsx
-import { Renderer } from '@jamir-hossain/richtor';
-import '@jamir-hossain/richtor/styles';
+import { Renderer } from 'richtor';
+import 'richtor/styles';
 
 function DisplayContent({ htmlContent }: { htmlContent: string }) {
   return <Renderer value={htmlContent} />;
