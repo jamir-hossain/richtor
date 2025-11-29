@@ -33,8 +33,7 @@
          "require": "./dist/editor.umd.js",
          "types": "./dist/index.d.ts"
       },
-      "./styles": "./dist/richtor.css",
-      "./dist/richtor.css": "./dist/richtor.css"
+      "./styles": "./dist/richtor.css"
    },
    "files": [
       "dist",

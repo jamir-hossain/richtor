@@ -119,8 +119,3 @@
    }
 }
 
-/* Enable pointer events for iframes in rendered content only (not in editor) */
-.rte-renderer iframe {
-   pointer-events: auto !important;
-   cursor: pointer;
-}

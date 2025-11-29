@@ -1,7 +1,5 @@
 'use client';
 
-import '@/style/index.css';
-
 import { createProcessor } from '@/lib/processor';
 import { createElement, Fragment, useEffect, useState } from 'react';
 import { components } from './components';

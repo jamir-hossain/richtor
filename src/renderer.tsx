@@ -1,3 +1,5 @@
+import '@/style/editor.css';
+
 import ClientRenderer from './components/renderer/client-renderer';
 import ServerRenderer from './components/renderer/server-renderer';
 

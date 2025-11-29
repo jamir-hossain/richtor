@@ -1,5 +1,5 @@
-// Import styles automatically
-import './style/index.css';
+// // Import styles automatically
+// import './style/index.css';
 
 // Main exports
 export { default as Editor } from './editor';
