@@ -19,9 +19,9 @@ export default defineConfig(({ mode }) => {
       ? {
           lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: 'ShadcnRichEditor',
+            name: 'Richtor',
             formats: ['es', 'umd'],
-            fileName: (format) => `shadcn-rich-editor.${format}.js`,
+            fileName: (format) => `editor.${format}.js`,
           },
           rollupOptions: {
             external: ['react', 'react-dom', 'react/jsx-runtime'],

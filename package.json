@@ -24,13 +24,13 @@
       "url": "https://github.com/jamir-hossain/richtor/issues"
    },
    "homepage": "https://github.com/jamir-hossain/richtor#readme",
-   "main": "./dist/shadcn-rich-editor.umd.js",
-   "module": "./dist/shadcn-rich-editor.es.js",
+   "main": "./dist/editor.umd.js",
+   "module": "./dist/editor.es.js",
    "types": "./dist/index.d.ts",
    "exports": {
       ".": {
-         "import": "./dist/shadcn-rich-editor.es.js",
-         "require": "./dist/shadcn-rich-editor.umd.js",
+         "import": "./dist/editor.es.js",
+         "require": "./dist/editor.umd.js",
          "types": "./dist/index.d.ts"
       },
       "./styles": "./dist/richtor.css"
