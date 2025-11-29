@@ -1,0 +1,35 @@
+# Source files
+src/
+public/
+*.config.ts
+*.config.js
+tsconfig*.json
+
+# Development files
+.vscode/
+.git/
+.gitignore
+node_modules/
+
+# Build artifacts
+.tmp/
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Demo/Example files
+src/App.tsx
+src/main.tsx
+index.html
+
+# Documentation (keep README.md and LICENSE)
+.prettierrc
+.eslintrc*
+eslint.config.js
+
+# Logs
+*.log
+npm-debug.log*
