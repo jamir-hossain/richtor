@@ -1,3 +1,15 @@
+/* Reset to prevent global CSS conflicts */
+.rte-editor,
+.rte-renderer {
+   box-sizing: border-box;
+   line-height: 1.5;
+}
+
+.rte-editor *,
+.rte-renderer * {
+   box-sizing: border-box;
+}
+
 .rte-editor,
 .rte-renderer,
 .rte-button,
@@ -84,22 +96,22 @@
 
 .rte-button {
    all: unset;
-   box-sizing: border-box;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   font-weight: 500;
-   border-radius: calc(var(--rte-radius, 0.5rem) * 0.75);
-   user-select: none;
-   cursor: pointer;
-   transition: all 0.15s ease-in;
-   white-space: nowrap;
-   width: auto;
-   height: 2rem;
-   padding-inline: 0.75rem;
-   border: 1px solid transparent;
-   font-size: 0.875rem;
-   line-height: 1.25rem;
+   box-sizing: border-box !important;
+   display: inline-flex !important;
+   align-items: center !important;
+   justify-content: center !important;
+   font-weight: 500 !important;
+   border-radius: calc(var(--rte-radius, 0.5rem) * 0.75) !important;
+   user-select: none !important;
+   cursor: pointer !important;
+   transition: all 0.15s ease-in !important;
+   white-space: nowrap !important;
+   width: auto !important;
+   height: 2rem !important;
+   padding-inline: 0.75rem !important;
+   border: 1px solid transparent !important;
+   font-size: 0.875rem !important;
+   line-height: 1.25rem !important;
 }
 .rte-button:disabled {
    opacity: 0.5;
@@ -478,17 +490,17 @@
 
 .rte-menu-bar,
 .rte-status-bar {
-   display: flex;
-   align-items: center;
-   min-height: 2.75rem;
-   background-color: var(--rte-bg, #ffffff);
-   padding: 0.125rem 0.125rem;
+   display: flex !important;
+   align-items: center !important;
+   min-height: 2.75rem !important;
+   background-color: var(--rte-bg, #ffffff) !important;
+   padding: 0.125rem 0.125rem !important;
 }
 
 .rte-menu-bar {
-   border-bottom: 1px solid var(--rte-border);
-   border-top-left-radius: var(--rte-radius, 0.5rem);
-   border-top-right-radius: var(--rte-radius, 0.5rem);
+   border-bottom: 1px solid var(--rte-border) !important;
+   border-top-left-radius: var(--rte-radius, 0.5rem) !important;
+   border-top-right-radius: var(--rte-radius, 0.5rem) !important;
 }
 
 .rte-status-bar {
