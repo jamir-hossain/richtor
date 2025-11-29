@@ -1,5 +1,3 @@
-import '@/style/index.css';
-
 import { createProcessor } from '../../lib/processor';
 import { components } from './components';
 
