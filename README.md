@@ -29,9 +29,10 @@ pnpm add richtor
 
 ### Basic Editor
 
+**Styles are automatically included!** No need to manually import CSS.
+
 ```tsx
 import { Editor } from 'richtor';
-import 'richtor/styles';
 import { useState } from 'react';
 
 function App() {
@@ -57,7 +58,6 @@ To display the editor content in read-only mode:
 
 ```tsx
 import { Renderer } from 'richtor';
-import 'richtor/styles';
 
 function DisplayContent({ htmlContent }: { htmlContent: string }) {
   return <Renderer value={htmlContent} />;
@@ -94,11 +94,19 @@ function DisplayContent({ htmlContent }: { htmlContent: string }) {
 
 ## Styling
 
-The package includes pre-built CSS that you need to import:
+**Styles are automatically included** when you import the components! No manual CSS import needed.
+
+### Manual CSS Import (Optional)
+
+If your bundler doesn't automatically process CSS imports, you can manually import:
 
 ```tsx
-import '@jamir-hossain/richtor/styles';
+import 'richtor/styles';
+// or
+import 'richtor/dist/richtor.css';
 ```
+
+### Customization
 
 The editor uses CSS variables for theming. You can customize the appearance by overriding these variables in your own CSS.
 

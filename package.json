@@ -1,7 +1,7 @@
 {
    "name": "richtor",
    "private": false,
-   "version": "1.0.3",
+   "version": "1.0.2",
    "type": "module",
    "description": "A beautiful and feature-rich WYSIWYG editor built with Tiptap and shadcn/ui",
    "author": "Jamir Hossain <jamir.hossain@example.com>",
@@ -33,7 +33,8 @@
          "require": "./dist/editor.umd.js",
          "types": "./dist/index.d.ts"
       },
-      "./styles": "./dist/richtor.css"
+      "./styles": "./dist/richtor.css",
+      "./dist/richtor.css": "./dist/richtor.css"
    },
    "files": [
       "dist",

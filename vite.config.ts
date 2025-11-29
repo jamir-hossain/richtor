@@ -31,6 +31,11 @@ export default defineConfig(({ mode }) => {
                 'react-dom': 'ReactDOM',
                 'react/jsx-runtime': 'jsxRuntime',
               },
+              // Inline CSS into JS for automatic loading
+              assetFileNames: (assetInfo) => {
+                if (assetInfo.name === 'style.css') return 'richtor.css';
+                return assetInfo.name || 'assets/[name][extname]';
+              },
             },
           },
           cssCodeSplit: false,
