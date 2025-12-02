@@ -24,7 +24,24 @@ export default defineConfig(({ mode }) => {
             fileName: (format) => `editor.${format}.js`,
           },
           rollupOptions: {
-            external: ['react', 'react-dom', 'react/jsx-runtime'],
+            external: [
+              'react', 
+              'react-dom', 
+              'react/jsx-runtime',
+              // Externalize heavy dependencies that users should install
+              '@tiptap/core',
+              '@tiptap/react',
+              '@tiptap/pm',
+              /^@tiptap\/extension-/,
+              '@tiptap/starter-kit',
+              'lucide-react',
+              /^@radix-ui\//,
+              'lowlight',
+              'highlight.js',
+              /^highlight\.js\//,  // Externalize all highlight.js language modules
+              /^@codemirror\//,
+              'codemirror',
+            ],
             output: {
               globals: {
                 react: 'React',
@@ -36,9 +53,17 @@ export default defineConfig(({ mode }) => {
                 if (assetInfo.name === 'style.css') return 'richtor.css';
                 return assetInfo.name || 'assets/[name][extname]';
               },
+              // Enable tree-shaking
+              manualChunks: undefined,
+            },
+            treeshake: {
+              moduleSideEffects: false,
+              propertyReadSideEffects: false,
             },
           },
+          minify: 'esbuild',
           cssCodeSplit: false,
+          sourcemap: false,
         }
       : {},
   }

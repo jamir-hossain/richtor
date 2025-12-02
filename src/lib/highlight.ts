@@ -1,24 +1,24 @@
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import type { JSX } from 'react';
 import * as prod from 'react/jsx-runtime';
-import { codeToHast } from 'shiki/bundle/full';
+import { createLowlight } from 'lowlight';
 
-export async function highlight(code: string, lang: string) {
-   const out = await codeToHast(code, {
-      lang,
-      themes: {
-         light: 'github-light-default',
-         dark: 'one-dark-pro',
-      },
-      //  structure: "inline",
-   });
+const lowlight = createLowlight();
 
-   return toJsxRuntime(out as any, {
-      Fragment: prod.Fragment,
-      jsx: prod.jsx,
-      jsxs: prod.jsxs,
-      components: {
-         pre: ({ children }) => children as any,
-      },
-   }) as JSX.Element;
+export function highlight(code: string, lang: string) {
+   try {
+      const tree = lowlight.highlight(lang, code, { prefix: 'hljs-' });
+      
+      return toJsxRuntime(tree as any, {
+         Fragment: prod.Fragment,
+         jsx: prod.jsx,
+         jsxs: prod.jsxs,
+         components: {
+            pre: ({ children }) => children as any,
+         },
+      }) as JSX.Element;
+   } catch (error) {
+      // Fallback for unsupported languages
+      return code as any;
+   }
 }
