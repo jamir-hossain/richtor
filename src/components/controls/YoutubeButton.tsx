@@ -22,12 +22,11 @@ const YoutubeButton = () => {
       },
    });
 
-   const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
+   const handleSubmit = () => {
       if (url.trim()) {
          editor.chain().focus().embedYoutube({ src: url }).run();
-         setOpen(false);
          setUrl('https://www.youtube.com/watch?v=DupfnOCH-JI');
+         setOpen(false);
       }
    };
 
@@ -35,7 +34,6 @@ const YoutubeButton = () => {
       <Dialog open={open} onOpenChange={setOpen}>
          <MenuButton icon="Youtube" tooltip="Youtube" onClick={() => setOpen(true)} {...state} />
          <DialogContent className="sm:max-w-[425px]">
-            <form onSubmit={handleSubmit}>
                <DialogHeader>
                   <DialogTitle>Embed YouTube Video</DialogTitle>
                   <DialogDescription>Enter the YouTube video URL to embed it in your content.</DialogDescription>
@@ -54,13 +52,12 @@ const YoutubeButton = () => {
                </div>
                <DialogFooter>
                   <DialogClose asChild>
-                     <Button variant="outline">Cancel</Button>
+                     <Button type="button" variant="outline">Cancel</Button>
                   </DialogClose>
-                  <Button type="submit" variant="primary">
+                  <Button onClick={handleSubmit} type="button" variant="primary">
                      Embed Video
                   </Button>
                </DialogFooter>
-            </form>
          </DialogContent>
       </Dialog>
    );

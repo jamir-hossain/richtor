@@ -662,6 +662,9 @@ img.ProseMirror-selectednode {
    outline: none;
    width: 100%;
    white-space: pre-wrap;
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+   word-break: break-word;
    position: relative;
    padding-block: 1.25rem;
 }
@@ -951,6 +954,13 @@ img.ProseMirror-selectednode {
 .rte-renderer iframe {
    pointer-events: auto !important;
    cursor: pointer;
+}
+
+/* Fix word wrapping for renderer content */
+.rte-renderer .ProseMirror {
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+   word-break: break-word;
 }
 
 /* Code Mirror */

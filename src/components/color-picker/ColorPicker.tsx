@@ -53,6 +53,7 @@ const ColorPicker = (props: ColorPickerProps) => {
             {['swatches', 'custom'].map((tab) => (
                <Button
                   key={tab}
+                  type="button"
                   variant="ghost"
                   data-active={activeTab === tab || undefined}
                   onClick={() => setActiveTab(tab as 'swatches' | 'custom')}
@@ -84,10 +85,10 @@ const ColorPicker = (props: ColorPickerProps) => {
 
          <PopoverClose asChild>
             <div className="rte-cp__actions">
-               <Button variant="secondary" iconOnly onClick={props.onReset}>
+               <Button variant="secondary" iconOnly type="button" onClick={props.onReset}>
                   <Icon name="PaletteOff" />
                </Button>
-               <Button style={{ width: '100%' }} onClick={handleApply}>
+               <Button style={{ width: '100%' }} type="button" onClick={handleApply}>
                   Apply
                </Button>
             </div>

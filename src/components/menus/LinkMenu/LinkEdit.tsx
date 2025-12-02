@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Button from '../../ui/Button';
 import Input from '../../ui/Input';
@@ -17,9 +17,7 @@ const LinkEdit = ({ initialUrl, initialText, isCreate, onApply, onCancel }: Link
    const [text, setText] = useState(initialText || '');
    const [canSubmit, setCanSubmit] = useState(isCreate);
 
-   const onSubmit = (event: React.FormEvent) => {
-      event.preventDefault();
-
+   const onSubmit = () => {
       if (canSubmit) {
          onApply(url!, text);
       }
@@ -32,7 +30,7 @@ const LinkEdit = ({ initialUrl, initialText, isCreate, onApply, onCancel }: Link
    }, [text, url]);
 
    return (
-      <form className="rte-link__form" onSubmit={onSubmit}>
+      <div className="rte-link__form" onSubmit={onSubmit}>
          <Label className="rte-link__label">URL</Label>
          <Input
             value={url}
@@ -48,14 +46,14 @@ const LinkEdit = ({ initialUrl, initialText, isCreate, onApply, onCancel }: Link
          <Input value={text} onChange={(e) => setText(e.target.value)} className="rte-link__input" placeholder="Enter link text" />
 
          <div className="rte-link__actions">
-            <Button variant="secondary" onClick={onCancel}>
+            <Button type='button' variant="secondary" onClick={onCancel}>
                Cancel
             </Button>
-            <Button type="submit" disabled={!canSubmit}>
+            <Button type="button" disabled={!canSubmit} onClick={onSubmit}>
                Apply
             </Button>
          </div>
-      </form>
+      </div>
    );
 };
 

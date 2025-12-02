@@ -17,7 +17,7 @@ const CopyButton = ({ code }: { code: string }) => {
    };
 
    return (
-      <button onClick={copyToClipboard} className="invisible absolute top-2 right-2 z-20 bg-transparent p-2 group-hover:visible">
+      <button type='button' onClick={copyToClipboard} className="invisible absolute top-2 right-2 z-20 bg-transparent p-2 group-hover:visible">
          {copied ? <Check size={18} /> : <Clipboard size={18} />}
       </button>
    );
