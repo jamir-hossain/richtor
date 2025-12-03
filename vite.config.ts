@@ -28,19 +28,6 @@ export default defineConfig(({ mode }) => {
               'react', 
               'react-dom', 
               'react/jsx-runtime',
-              // Externalize heavy dependencies that users should install
-              '@tiptap/core',
-              '@tiptap/react',
-              '@tiptap/pm',
-              /^@tiptap\/extension-/,
-              '@tiptap/starter-kit',
-              'lucide-react',
-              /^@radix-ui\//,
-              'lowlight',
-              'highlight.js',
-              /^highlight\.js\//,  // Externalize all highlight.js language modules
-              /^@codemirror\//,
-              'codemirror',
             ],
             output: {
               globals: {
