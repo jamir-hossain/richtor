@@ -27,13 +27,19 @@
    "main": "./dist/editor.umd.js",
    "module": "./dist/editor.es.js",
    "types": "./dist/index.d.ts",
+   "sideEffects": [
+      "*.css",
+      "dist/richtor.css"
+   ],
    "exports": {
       ".": {
          "import": "./dist/editor.es.js",
          "require": "./dist/editor.umd.js",
          "types": "./dist/index.d.ts"
       },
-      "./styles": "./dist/richtor.css"
+      "./style": "./dist/richtor.css",
+      "./styles": "./dist/richtor.css",
+      "./dist/richtor.css": "./dist/richtor.css"
    },
    "files": [
       "dist",

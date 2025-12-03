@@ -17,6 +17,8 @@ A beautiful and feature-rich WYSIWYG editor built with [Tiptap](https://tiptap.d
 
 ## Installation
 
+### 1. Install the package
+
 ```bash
 npm install richtor
 # or
@@ -25,11 +27,21 @@ yarn add richtor
 pnpm add richtor
 ```
 
+### 2. Install peer dependencies
+
+```bash
+npm install @tiptap/core @tiptap/react @tiptap/pm @tiptap/starter-kit lucide-react lowlight highlight.js
+```
+
+### 3. Import styles
+
+```tsx
+import 'richtor/style';
+```
+
 ## Usage
 
 ### Basic Editor
-
-**Styles are automatically included!** No need to manually import CSS.
 
 ```tsx
 import { Editor } from 'richtor';
