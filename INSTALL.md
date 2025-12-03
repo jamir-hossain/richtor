@@ -19,7 +19,24 @@ pnpm add richtor
 ### 2. Install peer dependencies
 
 ```bash
-npm install @tiptap/core @tiptap/react @tiptap/pm @tiptap/starter-kit lucide-react lowlight highlight.js
+npm install @tiptap/core @tiptap/react @tiptap/pm @tiptap/starter-kit \
+  @tiptap/extension-bubble-menu @tiptap/extension-bullet-list \
+  @tiptap/extension-character-count @tiptap/extension-code-block-lowlight \
+  @tiptap/extension-color @tiptap/extension-highlight \
+  @tiptap/extension-image @tiptap/extension-link \
+  @tiptap/extension-list-keymap @tiptap/extension-ordered-list \
+  @tiptap/extension-placeholder @tiptap/extension-subscript \
+  @tiptap/extension-superscript @tiptap/extension-table \
+  @tiptap/extension-table-cell @tiptap/extension-table-header \
+  @tiptap/extension-table-row @tiptap/extension-text-align \
+  @tiptap/extension-text-style @tiptap/extension-underline \
+  lucide-react lowlight highlight.js
+```
+
+**Or install all TipTap packages at once:**
+
+```bash
+npm install @tiptap/{core,react,pm,starter-kit,extension-{bubble-menu,bullet-list,character-count,code-block-lowlight,color,highlight,image,link,list-keymap,ordered-list,placeholder,subscript,superscript,table,table-cell,table-header,table-row,text-align,text-style,underline}} lucide-react lowlight highlight.js
 ```
 
 ### 3. Import styles
