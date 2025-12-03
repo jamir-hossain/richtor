@@ -17,12 +17,37 @@ A beautiful and feature-rich WYSIWYG editor built with [Tiptap](https://tiptap.d
 
 ## Installation
 
+### Quick Install (Recommended)
+
 ```bash
-npm install richtor
-# or
-yarn add richtor
-# or
-pnpm add richtor
+# Install richtor and all required TipTap dependencies
+npm install richtor @tiptap/core @tiptap/react @tiptap/pm @tiptap/starter-kit \
+  @tiptap/extension-bubble-menu @tiptap/extension-bullet-list \
+  @tiptap/extension-character-count @tiptap/extension-code-block-lowlight \
+  @tiptap/extension-color @tiptap/extension-highlight \
+  @tiptap/extension-image @tiptap/extension-link \
+  @tiptap/extension-list-keymap @tiptap/extension-ordered-list \
+  @tiptap/extension-placeholder @tiptap/extension-subscript \
+  @tiptap/extension-superscript @tiptap/extension-table \
+  @tiptap/extension-table-cell @tiptap/extension-table-header \
+  @tiptap/extension-table-row @tiptap/extension-text-align \
+  @tiptap/extension-text-style @tiptap/extension-underline
+```
+
+### Why Install TipTap Separately?
+
+Richtor requires TipTap as a peer dependency to avoid duplicate plugin instances. This ensures:
+- ✅ No conflicts with your existing TipTap installation
+- ✅ You control which TipTap version to use
+- ✅ Smaller bundle size (no duplicates)
+
+### Alternative: Use Installation Script
+
+```bash
+# Download and run the installation script
+curl -o install-richtor.sh https://raw.githubusercontent.com/jamir-hossain/richtor/main/install-deps.sh
+chmod +x install-richtor.sh
+./install-richtor.sh
 ```
 
 ## Usage

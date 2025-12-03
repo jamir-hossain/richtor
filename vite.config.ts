@@ -28,6 +28,12 @@ export default defineConfig(({ mode }) => {
               'react', 
               'react-dom', 
               'react/jsx-runtime',
+              // Externalize TipTap to avoid duplicate plugin instances
+              '@tiptap/core',
+              '@tiptap/react',
+              '@tiptap/pm',
+              /^@tiptap\/extension-/,
+              '@tiptap/starter-kit',
             ],
             output: {
               globals: {
