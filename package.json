@@ -33,7 +33,10 @@
          "require": "./dist/editor.umd.js",
          "types": "./dist/index.d.ts"
       },
-      "./styles": "./dist/richtor.css"
+      "./styles": {
+         "import": "./dist/styles.es.js",
+         "require": "./dist/styles.umd.js"
+      }
    },
    "files": [
       "dist",
@@ -43,7 +46,7 @@
    "scripts": {
       "dev": "vite",
       "build": "tsc && vite build",
-      "build:lib": "vite build --mode lib && tsc --project tsconfig.lib.json",
+      "build:lib": "vite build --mode lib && node ./scripts/generate-styles.mjs && tsc --project tsconfig.lib.json",
       "lint": "eslint .",
       "preview": "vite preview",
       "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss}\"",
