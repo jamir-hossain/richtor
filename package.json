@@ -1,7 +1,7 @@
 {
    "name": "richtor",
    "private": false,
-   "version": "1.2.3",
+   "version": "1.2.4",
    "type": "module",
    "description": "A beautiful and feature-rich WYSIWYG editor built with Tiptap and shadcn/ui",
    "author": "Jamir Hossain <jamir.hossain@example.com>",
