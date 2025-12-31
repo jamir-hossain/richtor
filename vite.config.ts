@@ -31,9 +31,10 @@ export default defineConfig(({ mode }) => {
               // Externalize TipTap to avoid duplicate plugin instances
               '@tiptap/core',
               '@tiptap/react',
-              '@tiptap/pm',
+              /^@tiptap\/pm(\/.*)?$/,
               /^@tiptap\/extension-/,
               '@tiptap/starter-kit',
+              /^prosemirror-/, 
             ],
             output: {
               globals: {
