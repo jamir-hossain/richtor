@@ -13,8 +13,7 @@ export type UseTiptapEditorOptions = UseEditorOptions & {
 
 export default function useTiptapEditor({ ref, placeholder, ...editorOptions }: UseTiptapEditorOptions) {
    const forceUpdate = useForceUpdate();
-   const isServer = typeof window === 'undefined';
-   const editor = useEditor((isServer ? null : editorOptions) as any, []);
+   const editor = useEditor(editorOptions as any, []);
 
    useImperativeHandle(
       ref,

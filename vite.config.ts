@@ -42,6 +42,7 @@ export default defineConfig(({ mode }) => {
                 'react-dom': 'ReactDOM',
                 'react/jsx-runtime': 'jsxRuntime',
               },
+              banner: "'use client';\n",
               // Inline CSS into JS for automatic loading
               assetFileNames: (assetInfo) => {
                 if (assetInfo.name === 'style.css') return 'richtor.css';
