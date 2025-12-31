@@ -61,6 +61,8 @@ const TiptapEditor = forwardRef<TiptapEditorRef, TiptapEditorProps>(
       },
       ref,
    ) => {
+      const isServer = typeof window === 'undefined';
+      const effectiveSsr = ssr || isServer;
       const isEditable = !readonly && !disabled;
       const displayBubbleMenu = isEditable && hideBubbleMenu;
 
@@ -83,7 +85,7 @@ const TiptapEditor = forwardRef<TiptapEditorRef, TiptapEditorProps>(
          extensions: ExtensionKit,
          content: initialContent,
          editable: isEditable,
-         immediatelyRender: !ssr,
+         immediatelyRender: !effectiveSsr,
          shouldRerenderOnTransaction: false,
          autofocus: false,
          onUpdate: ({ editor }) => handleUpdate(editor),

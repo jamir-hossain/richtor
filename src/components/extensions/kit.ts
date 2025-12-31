@@ -26,6 +26,9 @@ const ExtensionKit: Extensions = [
       horizontalRule: false,
       hardBreak: false,
       codeBlock: false,
+      link: false,
+      underline: false,
+      listKeymap: false,
    }),
    Placeholder.configure({
       includeChildren: true,
